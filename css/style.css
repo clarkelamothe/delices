@@ -455,7 +455,7 @@ body .nosotros .chef-section {
 }
 
 body .nosotros .chef-section article {
-  height: 50vh;
+  height: 40vh;
   width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -470,6 +470,7 @@ body .nosotros .chef-section article {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 2em 0 4em;
 }
 
 body .nosotros .chef-section article .img-y-social {
@@ -492,7 +493,7 @@ body .nosotros .chef-section article .img-y-social img {
   height: 150px;
   width: 150px;
   border-radius: 50%;
-  margin: 1em;
+  margin: 0 1em 1em 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

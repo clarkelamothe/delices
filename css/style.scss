@@ -285,16 +285,18 @@ body{
         .chef-section{
             @include size(auto, 40em);
             padding: 0 3em 0 3em;
+
             article{
-                @include size(50vh,90%);
+                @include size(40vh,90%);
                 @include flex(flex, row, center, center);
+                padding:0 2em 0 4em;
 
                 .img-y-social{
                     @include flex(flex, column, center, center);
                     img{
                         @include size(150px, 150px);
                         border-radius: 50%;
-                        margin: 1em;
+                        margin: 0 1em 1em 0;
                         display: flex;
                         flex-direction: row;
                         justify-self: flex-start;
@@ -311,6 +313,5 @@ body{
             }
         }
     }
-
 }
 
