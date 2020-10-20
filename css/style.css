@@ -493,15 +493,7 @@ body .nosotros .chef-section article .img-y-social img {
   height: 150px;
   width: 150px;
   border-radius: 50%;
-  margin: 0 1em 1em 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  justify-self: flex-start;
+  margin: 1em;
 }
 
 body .nosotros .chef-section article .img-y-social .social a {
@@ -510,5 +502,95 @@ body .nosotros .chef-section article .img-y-social .social a {
 
 body .nosotros .chef-section article .img-y-social .social a i {
   color: #d5c199;
+}
+
+body .contactos {
+  height: 80vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-color: #282423;
+  padding: 0 3em 0 3em;
+}
+
+body .contactos .background-text {
+  height: 20%;
+  width: 100%;
+  position: relative;
+  top: 0;
+  right: 0;
+}
+
+body .contactos .background-text h2 {
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 10em;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 5%;
+  color: #AC8435;
+}
+
+body .contactos .form {
+  height: 50vh;
+  width: 50vw;
+}
+
+body .contactos .form form {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+body .contactos .form form label {
+  margin-bottom: 1em;
+  color: #d5c199;
+}
+
+body .contactos .form form input {
+  height: 200px;
+  width: 500px;
+  border: 0px;
+  margin-bottom: 1em;
+  border-radius: 5px;
+}
+
+body .contactos .social {
+  height: 100%;
+  width: 100%;
+  margin: 2em;
+  text-align: center;
+}
+
+body .contactos .social a {
+  text-decoration: none;
+}
+
+body .contactos .social a i {
+  font-size: 2em;
+  color: #d5c199;
+  margin: 0 1em 0 1em;
 }
 /*# sourceMappingURL=style.css.map */
