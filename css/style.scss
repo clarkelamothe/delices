@@ -253,5 +253,64 @@ body{
             }
         }
     }
+
+    .nosotros{
+        @include size(auto, 100vw);
+        @include flex(flex, column, center, center);
+        background-color: map-get($color, secondary);
+        .background-text{
+            @include size(20%, 100%);
+            @include position(relative, 7em, 0);
+            h2{
+                font-family: 'Cinzel Decorative', cursive;
+                font-size: 10em;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 5%;
+                color: map-get($color, primary);
+            }
+        }
+        .nosotros-header{
+            @include size(auto, 100vw);
+            @include flex(flex, row, center, center);
+
+            h3{
+                font-family: 'Cinzel Decorative', cursive;
+                font-weight: 700;
+                font-size: 1.5em;
+                color: map-get($color, primary);
+                margin-bottom: 2em;
+            }
+        }
+        .chef-section{
+            @include size(auto, 40em);
+            padding: 0 3em 0 3em;
+            article{
+                @include size(50vh,90%);
+                @include flex(flex, row, center, center);
+
+                .img-y-social{
+                    @include flex(flex, column, center, center);
+                    img{
+                        @include size(150px, 150px);
+                        border-radius: 50%;
+                        margin: 1em;
+                        display: flex;
+                        flex-direction: row;
+                        justify-self: flex-start;
+                    }
+                    .social{
+                        a{
+                            text-decoration: none;
+                            i{
+                                color: map-get($color, lighter);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }
 
