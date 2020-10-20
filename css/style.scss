@@ -59,7 +59,8 @@ body{
         @include position(relative, 0, 0);
         display: none;
         background-color: map-get($color, primary);
-        z-index: 1;
+        z-index: 4;
+
         .iconX{
             @include position(absolute, 2em, 2em);
 
@@ -105,12 +106,13 @@ body{
         @include size(90vh, 100vw);
         @include position(relative, $height-header, 0);
         @include flex(flex, column, center, flex-start);
-        background-color: map-get($color, secondary);
         padding: 0 3em 0 3em;
+        background-color: map-get($color, secondary);
         background-image: url(../img/pexels-acharaporn-kamornboonyarush-1028714.jpg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        overflow: hidden;
         .background-text{
             @include size(20%, 100%);
             @include position(absolute, 7em, 0);
@@ -127,7 +129,7 @@ body{
             @include size(300px,280px);
             z-index: 2;
             article{
-                margin-bottom: 3em;
+                margin-bottom: 1.5em;
                 h1{
                     font-family: 'PT Serif', serif;
                     font-size: 2.5em;
@@ -166,21 +168,195 @@ body{
             }
         }
         .arrow-down{
-            @include size(20px, 100%);
             display: flex;
             flex-direction: column;
-            justify-self: flex-end;
+            justify-self: flex-start;
             align-self: flex-end;
             text-align: right;
             a{
                 i{
                     font-size: 1.5em;
-                    color: map-get($color, lighter);
+                    color: map-get($color, secondary);
                 }
             }
         }
     }
 
+    .page-menu{
+        @include size(auto, 100vw);
+        background-color: map-get($color, secondary);
+        .background-text{
+            @include size(20%, 100%);
+            @include position(relative, 7em, 0);
+            h2{
+                font-family: 'Cinzel Decorative', cursive;
+                font-size: 10em;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 5%;
+                color: map-get($color, primary);
+            }
+        }
+        .menu-header{
+            @include size(auto, 100vw);
+            @include flex(flex, row, center, center);
 
+            h3{
+                font-family: 'Cinzel Decorative', cursive;
+                font-weight: 700;
+                font-size: 1.5em;
+                color: map-get($color, primary);
+                margin-bottom: 2em;
+            }
+        }
+        .menu-cards{
+            @include flex(flex, column, center, center);
+
+            section{
+                padding: 0 3em 0 3em;
+                @include size(auto, 100vw);
+                @include flex(flex, row, center, center);
+                flex-wrap: wrap;
+
+                a{
+                    text-decoration: none;
+                    article{
+                        @include flex(flex, column, flex-end, center);
+                        @include size(20em, 20em);
+                        background-image: url(../img/pexels-pixabay-302468.jpg);
+                        margin: 1em;
+                        border-radius: 0.5em;
+                        overflow: hidden;
+                        background-position: center bottom;
+
+                            .info{
+                                margin: 1.5em;
+                                z-index: 89;
+                                background-color: map-get($color, darker);
+                                opacity: 70%;
+                                padding: 1em;
+                                border-radius: 0.5em;
+                                h4{
+                                    font-family: 'PT Serif', serif;
+                                    font-weight: 400;
+                                    color: map-get($color, secondary);
+                                }
+                                p{
+                                    font-family: 'PT Serif', serif;
+                                    color: map-get($color, lighter);
+                                    font-weight: 400;
+                                    font-style: italic;
+                                }
+                            }
+                        }
+                }
+            }
+        }
+    }
+
+    .nosotros{
+        @include size(auto, 100vw);
+        @include flex(flex, column, center, center);
+        background-color: map-get($color, secondary);
+        .background-text{
+            @include size(20%, 100%);
+            @include position(relative, 7em, 0);
+            h2{
+                font-family: 'Cinzel Decorative', cursive;
+                font-size: 10em;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 5%;
+                color: map-get($color, primary);
+            }
+        }
+        .nosotros-header{
+            @include size(auto, 100vw);
+            @include flex(flex, row, center, center);
+
+            h3{
+                font-family: 'Cinzel Decorative', cursive;
+                font-weight: 700;
+                font-size: 1.5em;
+                color: map-get($color, primary);
+                margin-bottom: 2em;
+            }
+        }
+        .chef-section{
+            @include size(auto, 40em);
+            padding: 0 3em 0 3em;
+            article{
+                @include size(50vh,90%);
+                @include flex(flex, row, center, center);
+
+                .img-y-social{
+                    @include flex(flex, column, center, center);
+                    img{
+                        @include size(150px, 150px);
+                        border-radius: 50%;
+                        margin: 1em;
+
+                    }
+                    .social{
+                        a{
+                            text-decoration: none;
+                            i{
+                                color: map-get($color, lighter);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .contactos{
+        @include size(80vh, 100vw);
+        @include flex(flex, column, center, flex-start);
+        background-color: map-get($color, darker);
+        padding: 0 3em 0 3em;
+        .background-text{
+            @include size(20%, 100%);
+            @include position(relative, 0, 0);
+            h2{
+                font-family: 'Cinzel Decorative', cursive;
+                font-size: 10em;
+                overflow: hidden;
+                z-index: 1;
+                opacity: 5%;
+                color: map-get($color, primary);
+            }
+        }
+        .form{
+            @include size(50vh, 50vw);
+            form{
+                @include size(100%, 100%);
+                @include flex(flex, column, center, flex-start);
+                label{
+                    margin-bottom: 1em;
+                    color: map-get($color, lighter);
+                }
+                input{
+                    @include size(200px, 500px);
+                    border: 0px;
+                    margin-bottom: 1em;
+                    border-radius: 5px;
+                }
+            }
+        }
+        .social{
+            @include size(100%, 100%);
+            margin: 2em;
+            text-align: center;
+            a{
+                text-decoration: none;
+                i{
+                    font-size: 2em;
+                    color: map-get($color, lighter);
+                    margin: 0 1em 0 1em;
+                }
+            }
+        }
+    }
 }
 
