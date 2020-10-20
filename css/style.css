@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body header {
+  background-color: #AC8435;
+  height: 5em;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 0 2em 0 2em;
+}
+
+body header .logo {
+  font-family: 'Cinzel Decorative', cursive;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+  width: 100px;
+}
+
+body header .logo a {
+  text-decoration: none;
+  color: #F7F2E9;
+}
+
+body header .hamburger a {
+  text-decoration: none;
+  color: #F7F2E9;
+}
+
+body header .hamburger a i {
+  font-size: 1.5em;
+}
+
+menu {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  top: 0;
+  right: 0;
+  display: none;
+  background-color: #AC8435;
+  z-index: 1;
+}
+
+menu .iconX {
+  position: absolute;
+  top: 2em;
+  right: 2em;
+}
+
+menu .iconX a {
+  text-decoration: none;
+}
+
+menu .iconX a i {
+  font-size: 1.5em;
+  color: #F7F2E9;
+}
+
+menu ul {
+  height: 100%;
+}
+
+menu ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5em;
+  width: 100%;
+  list-style: none;
+}
+
+menu ul li a {
+  text-decoration: none;
+  color: #d5c199;
+  font-size: 1.5em;
+  font-family: 'PT Serif', serif;
+  border-bottom: 0.1px solid #d5c199;
+  -webkit-transition: border ease-in-out 0.4s, color 2ms ease-in-out;
+  transition: border ease-in-out 0.4s, color 2ms ease-in-out;
+}
+
+menu ul li a:hover {
+  border-bottom: 4px solid #F7F2E9;
+  color: #F7F2E9;
+}
+
+menu ul li:hover {
+  cursor: pointer;
+}
+
+menu:target {
+  display: block;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,103 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap');
+
+$color: (
+    'primary'   : #AC8435,
+    'secondary' : #F7F2E9,
+    'black'     : #282423,
+    'lighter'     : #d5c199,
+);
+$height-header: 5em;
+@mixin flex($display, $direction, $justify, $align){
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin size($height, $width){
+    height: $height;
+    width: $width;
+}
+@mixin position($position, $top, $right){
+    position:$position;
+    top: $top;
+    right: $right;
+}
+
+body{
+    header{
+        background-color: map-get($color, primary);
+        @include size($height-header, 100vw);
+        @include flex(flex, row, space-between, center);
+        @include position(fixed, 0, 0);
+        padding: 0 2em 0 2em;
+
+        .logo{
+            font-family: 'Cinzel Decorative', cursive;
+            font-weight: 700;
+            @include flex(flex, row, center, center);
+            @include size(40px, 100px);
+
+            a{
+                text-decoration: none;
+                color: map-get($color, secondary);
+            }
+        }
+        .hamburger{
+            a{
+                text-decoration: none;
+                color: map-get($color, secondary);
+                i{
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+}
+menu{
+    @include size(100vh, 100vw);
+    @include position(relative, 0, 0);
+    display: none;
+    background-color: map-get($color, primary);
+    z-index: 1;
+    .iconX{
+        @include position(absolute, 2em, 2em);
+
+        a{
+            text-decoration: none;
+            i{
+                font-size: 1.5em;
+                color: map-get($color, secondary);
+            }
+        }
+    }
+
+    ul{
+        height: 100%;
+        li{
+            @include flex(flex, column, center, center);
+            @include size($height-header, 100%);
+            list-style: none;
+
+            a{
+                text-decoration: none;
+                color: map-get($color, lighter);;
+                font-size: 1.5em;
+                font-family: 'PT Serif', serif;
+                border-bottom: 0.1px solid map-get($color, lighter);
+                transition: border ease-in-out 0.4s, color 2ms ease-in-out;
+                &:hover{
+                    border-bottom: 4px solid map-get($color, secondary);
+                    color: map-get($color, secondary);
+                }
+            }
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+    &:target{
+        display: block;
+    }
+}
+
