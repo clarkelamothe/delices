@@ -23,7 +23,8 @@ $color: (
     top: $top;
     right: $right;
 }
-$height-header: 5em;
+$height-header: 4em;
+
 body{
     header{
         background-color: map-get($color, primary);
@@ -31,6 +32,7 @@ body{
         @include flex(flex, row, space-between, center);
         @include position(absolute, 0, 0);
         padding: 0 3em 0 3em;
+        z-index: 4;
 
         .logo{
             font-family: 'Cinzel Decorative', cursive;
@@ -59,7 +61,7 @@ body{
         @include position(relative, 0, 0);
         display: none;
         background-color: map-get($color, primary);
-        z-index: 4;
+        z-index: 5;
 
         .iconX{
             @include position(absolute, 2em, 2em);
@@ -79,7 +81,7 @@ body{
                 @include flex(flex, column, center, center);
                 @include size($height-header, 100%);
                 list-style: none;
-
+                margin: 0 1em 0 1em;
                 a{
                     text-decoration: none;
                     color: map-get($color, lighter);;
@@ -87,7 +89,7 @@ body{
                     font-family: 'PT Serif', serif;
                     border-bottom: 0.1px solid map-get($color, lighter);
                     transition: border ease-in-out 0.4s, color 2ms ease-in-out;
-                    &:hover{
+                    &:hover, &:active{
                         border-bottom: 4px solid map-get($color, secondary);
                         color: map-get($color, secondary);
                     }
@@ -115,7 +117,7 @@ body{
         overflow: hidden;
         .background-text{
             @include size(20%, 100%);
-            @include position(absolute, 7em, 0);
+            @include position(absolute, 3em, 0);
             h2{
                 font-family: 'Cinzel Decorative', cursive;
                 font-size: 10em;
@@ -285,6 +287,7 @@ body{
         .chef-section{
             @include size(auto, 40em);
             padding: 0 3em 0 3em;
+            @include flex(flex, column, space-around, center);
 
             article{
                 @include size(40vh,90%);
@@ -348,7 +351,7 @@ body{
         }
         .social{
             @include size(100%, 100%);
-            margin: 2em;
+            margin-top: 2em;
             text-align: center;
             a{
                 text-decoration: none;
@@ -362,3 +365,28 @@ body{
     }
 }
 
+
+
+@media screen and (min-width: 500px) and (max-width:1000px){
+    header{
+        .hamburger{
+            display: none;
+        }
+        menu{
+            @include size(2em, 40vw);
+            display: inline;
+            ul{
+                @include flex(flex, row, space-between, center);
+                li{
+                    a{
+                        text-decoration: none;
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+    }
+    .nosotros{
+        
+    }
+}
