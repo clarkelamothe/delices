@@ -8,7 +8,7 @@
 
 body header {
   background-color: #AC8435;
-  height: 5em;
+  height: 4em;
   width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -27,6 +27,7 @@ body header {
   top: 0;
   right: 0;
   padding: 0 3em 0 3em;
+  z-index: 4;
 }
 
 body header .logo {
@@ -71,7 +72,7 @@ body menu {
   right: 0;
   display: none;
   background-color: #AC8435;
-  z-index: 4;
+  z-index: 5;
 }
 
 body menu .iconX {
@@ -107,9 +108,10 @@ body menu ul li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 5em;
+  height: 4em;
   width: 100%;
   list-style: none;
+  margin: 0 1em 0 1em;
 }
 
 body menu ul li a {
@@ -122,7 +124,7 @@ body menu ul li a {
   transition: border ease-in-out 0.4s, color 2ms ease-in-out;
 }
 
-body menu ul li a:hover {
+body menu ul li a:hover, body menu ul li a:active {
   border-bottom: 4px solid #f8eedb;
   color: #f8eedb;
 }
@@ -139,7 +141,7 @@ body .inicio {
   height: 90vh;
   width: 100vw;
   position: relative;
-  top: 5em;
+  top: 4em;
   right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -167,7 +169,7 @@ body .inicio .background-text {
   height: 20%;
   width: 100%;
   position: absolute;
-  top: 7em;
+  top: 3em;
   right: 0;
 }
 
@@ -452,10 +454,22 @@ body .nosotros .chef-section {
   height: auto;
   width: 40em;
   padding: 0 3em 0 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body .nosotros .chef-section article {
-  height: 50vh;
+  height: 40vh;
   width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -470,6 +484,7 @@ body .nosotros .chef-section article {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 2em 0 4em;
 }
 
 body .nosotros .chef-section article .img-y-social {
@@ -570,7 +585,7 @@ body .contactos .form form label {
 
 body .contactos .form form input {
   height: 200px;
-  width: 500px;
+  width: 400px;
   border: 0px;
   margin-bottom: 1em;
   border-radius: 5px;
@@ -579,7 +594,7 @@ body .contactos .form form input {
 body .contactos .social {
   height: 100%;
   width: 100%;
-  margin: 2em;
+  margin-top: 2em;
   text-align: center;
 }
 
@@ -591,5 +606,35 @@ body .contactos .social a i {
   font-size: 2em;
   color: #d5c199;
   margin: 0 1em 0 1em;
+}
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+  header .hamburger {
+    display: none;
+  }
+  header menu {
+    height: 2em;
+    width: 40vw;
+    display: inline;
+  }
+  header menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header menu ul li a {
+    text-decoration: none;
+    font-size: 1em;
+  }
 }
 /*# sourceMappingURL=style.css.map */
